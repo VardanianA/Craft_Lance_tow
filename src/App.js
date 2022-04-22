@@ -1,12 +1,15 @@
 import React from 'react';
+
 import Contact from 'components/contact/Contact';
 import Footer from 'components/footer/Footer';
 import Header from 'components/header/Header';
-import Home from 'pages/home/Home';
-import Community from 'pages/community/Community';
-import SignUp from 'pages/signUp/SignUp';
-import Services from 'pages/services/Services';
-import Feature from 'pages/feature/Feature';
+
+import Home from 'sections/home/Home';
+import Community from 'sections/community/Community';
+import SignUp from 'sections/signUp/SignUp';
+import Services from 'sections/services/Services';
+import Feature from 'sections/feature/Feature';
+
 import './App.scss';
 
 const App = () => {

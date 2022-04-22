@@ -1,0 +1,228 @@
+.services {
+  height: 820px;
+
+  &__inner {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 900px 1fr;
+    grid-template-rows: calc((820px - 50px - 95px - 400px) / 2) 50px 95px 400px calc((820px - 50px - 95px - 400px) / 2);
+    width: 100%;
+  }
+
+  .title {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: black;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  &__buttons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  &__button {
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 400;
+
+    &--left {
+      padding: 8px 23px 8px 20px;
+      border: 1px solid #ececec;
+      border-radius: 20px 0 0 20px;
+    }
+
+    &--right {
+      padding: 9px 16px 9px 16px;
+      border-radius: 0 20px 20px 0;
+      background-color: #5db442;
+      color: white;
+    }
+  }
+
+  &__text {
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    background-color: #4ca368;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 400;
+    color: white;
+  }
+
+  &__row {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-columns: calc(calc(100vw - calc(3 * 270px)) / 2) 270px calc(calc(100vw - calc(3 * 270px)) / 2);
+    // grid-template-rows: calc(calc(100vh - 400px) / 2) 400px calc(calc(100vh - 400px) / 2);
+    width: 100%;
+  }
+
+  .item-services {
+    height: 400px;
+    width: 100%;
+    text-align: center;
+
+    &__box {
+      position: relative;
+      margin: 0 30px;
+      border: 1px solid #ececec;
+      height: 100%;
+      padding: 20px 30px 40px 30px;
+
+      &:hover .item-services__line {
+        background-color: #5db442;
+      }
+
+      &:hover .item-services__button {
+        background-color: #5db442;
+        color: #e9f5e6;
+      }
+    }
+
+    &__line {
+      background-color: #cccccc;
+      height: 2px;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      left: 60px;
+    }
+
+    &__title {
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #333333;
+    }
+
+    &__price-line {
+      position: absolute;
+      background-color: #ececec;
+      height: 2px;
+      width: 100%;
+      top: 30%;
+      left: 0;
+      z-index: -1;
+    }
+
+    &__price {
+      border: 2px solid #71bc5a;
+      outline: 3px solid #ececec;
+      border-radius: 50%;
+      margin: 30px 35px;
+      display: grid;
+      background-color: white;
+      z-index: 100;
+      padding: 27px 26px;
+
+      .price {
+        font-family: "Roboto", sans-serif;
+        font-size: 23px;
+        font-weight: 500;
+        color: #333333;
+      }
+
+      .month {
+        font-family: "Roboto", sans-serif;
+        font-size: 10px;
+        font-weight: 300;
+        font-style: italic;
+        color: #777777;
+      }
+    }
+
+    &__checking {
+      display: grid;
+      row-gap: 15px;
+    }
+
+    &__text {
+      font-family: "Roboto", sans-serif;
+      font-size: 12px;
+      color: #777777;
+      font-size: 500;
+    }
+
+    &__button {
+      font-family: "Roboto", sans-serif;
+      padding: 13px 37px 12px 36px;
+      margin-top: 31px;
+      border-radius: 20px;
+      background-color: white;
+      outline: 1px solid #ececec;
+      color: #333333;
+      font-size: 10px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    height: auto;
+
+    &__inner {
+      grid-template-columns: calc(100vw - 768px);
+      grid-template-rows: 20px 50px 50px calc(820px - 50px - 50px - 20px - 20px) 20px;
+    }
+
+    .title {
+      font-size: 40px;
+    }
+
+    &__button {
+      font-size: 10px;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .item-services {
+      height: 300px;
+      width: 240px;
+      margin: 10px;
+
+      &__box {
+        padding: 10px;
+        margin: 10px;
+      }
+
+      &__price {
+        padding: 10px;
+        margin: 10px 60px;
+      }
+
+      &__price-line {
+        top: 25%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services {
+    .title {
+      font-size: 35px;
+    }
+  }
+}
